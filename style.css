@@ -1,0 +1,25 @@
+.hero {
+    background-color: #007bff;
+    color: white;
+    padding: 50px 0;
+}
+.hero h1 {
+    font-size: 3rem;
+}
+.project-card {
+    margin-bottom: 20px;
+}
+footer {
+    background-color: #343a40;
+    color: white;
+    padding: 20px 0;
+}
+.flex-container {
+     justify-content: space-around;
+}
+.nav_links{
+    background-color: #1152cc;   
+}
+.nav_link{
+    color: white;
+}
