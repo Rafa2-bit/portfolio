@@ -15,6 +15,7 @@
             color: white;
             padding: 50px 0;
             height: 350px; 
+            margin: 0;
         }
         .hero h1 {
             font-size: 3rem;
@@ -30,20 +31,13 @@
         .nav_links{
             background-color: #202731;   
         }
-        .cont_2{
-            padding: 0 140px;
-        }
-        .cont_3{
-            padding-left: 450px;
-            
-        }
     </style>
 </head>
-<body class="bg-light">
+<body class="bg-dark container-fluid border-0 m-0 p-0 border-0">
 
     <nav class="navbar navbar-expand-lg fixed-top navbar-dark nav_links">
         <div class="container nav_links ">
-          <a class="navbar-brand" href="#hero">Portifolío do fael</a>
+          <a class="navbar-brand" href="#hero">Portifolío Rafael Barbosa</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -54,12 +48,11 @@
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Tópicos</a>
                     <ul class="dropdown-menu">
                         <li><a href="#" class="dropdown-item">Sobre Mim</a></li>
-                        <li><a href="#" class="dropdown-item">Currículo</a></li>
+                        <li><a href="#curriculo" class="dropdown-item">Currículo</a></li>
                         <li><a href="#" class="dropdown-item">Projetos</a></li>
-                        <li><a href="#" class="dropdown-item">Habilidades</a></li>
+                        <li><a href="habilidades" class="dropdown-item">Habilidades</a></li>
                         <li><a href="#" class="dropdown-item">Documentos e Trabalhos</a></li>
                         <li><a href="#" class="dropdown-item">Certificações</a></li>
-                        <li><a href="#" class="dropdown-item">Contato</a></li>
                     </ul>
                 </div>
               </li>
@@ -70,7 +63,7 @@
                 <a class="nav-link" href="#skills">Habilidades</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#contact">Contato</a>
+                <a class="nav-link" href="contato.html">Contato</a>
               </li>
             </ul>
           </div>
@@ -78,23 +71,24 @@
       </nav>
       
       <br><br>
-    
+
+    <header>
     <section class="hero bg-gradient text-center" id="hero">
         <div class="container" style="padding: 60px ;">
             <h1>Olá, eu sou Rafael</h1>
             <p class="lead">Desenvolvedor Front-end e admirador de tecnologia</p>
         </div>
     </section>
+    </header>
 
     
     <section id="about" class="py-5">
         <div class="container">
-            <h2 class="mb-"></h2>
             <div class="row">
                 <div class="col-md-6" >
-                    <img  class="rounded-circle" style="height: 300px; width: 400px;" src="/image/fundo-futurista-de-tecnologia-gradiente_23-2149122416.avif alt="" class="img-fluid rounded img_sobre">
+                    <img  style="height: 300px; width: 400px;" src="/portfolio/image/fundo-futurista-de-tecnologia-gradiente_23-2149122416.avif" class="img-fluid rounded img_sobre rounded-circle">
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 text-light">
                     <h2>Sobre Mim</h2><br>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum nostrum, aut consequuntur cumque error tempora assumenda pariatur qui officiis optio illum, itaque eaque! Laboriosam saepe mollitia ut, fugiat quidem officia?</p>
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa laboriosam autem excepturi amet error iusto cumque tempore aut quibusdam, libero aliquam doloremque maiores consequuntur dicta optio alias ab temporibus eius.</p>
@@ -105,68 +99,62 @@
 
    <br><br><br>
 
-    <section id="Curriculo py-5">
-        <div class="container cont_2">
-            <div class="align-self-md-center">
-                <div class="text-center">
-                <span class="form-control border-dark-subtle"><h2 class="mb-4">Curriculo</h2>
+    <section id="Curriculo">
+        <div class="container-fluid col-lg">
+            <div class="row">
+                <div class="col-md"></div>
+                <div class="text-center col-md-6">
+                <span class="form-control border-dark-subtle bg-dark text-light"><h2 class="mb-4">Curriculo</h2>
                 <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas voluptates molestiae fugit beatae, asperiores officia sit molestias officiis natus ex impedit vero doloribus nobis odio recusandae libero. Facere, possimus ipsum.</h6>
-                <a href="" class="btn btn-dark">Currículo</a></span>
+                <a href="" class="btn btn-outline-light">Currículo</a></span>
                 </div>
+                <div class="col-md"></div>
+            </div>
+        </div>    
+    </section>
+
+    <br><br>
+
+    <section id="Curriculo py-5">
+        <div class="container-fluid col-lg">
+            <div class="row">
+                <div class="col-md"></div>
+                <div class="text-center col-md-5">
+                <span class="form-control border-dark-subtle bg-dark text-light"><h2 class="mb-4">Habilidades</h2>
+                   <li>fasjgdasdfgusm</li>
+                   <li>jgsfdsdhbasjhhk</li>
+                   <li>jytadfsuaysvhba</li>
+                </span>
+                </div>
+                <div class="col-md"></div>
             </div>
         </div>    
     </section>
 
     <br><br>
     
-    <section id="projetos" class="py-5 bg-light">
+    <section id="projetos" class="py-5 bg-dark">
         <div class="container">
-            <h2 class="text-center mb-5">Meus Projetos</h2>
-            <div class="cont_3">
-                <div class="col-5">
-                    <div class="card project-card">
-                        <img src="/image/easyscrumlogo.jpg" class="card-img-top" alt="Projeto 1">
+            <h2 class="text-center mb-5 text-light">Meus Projetos</h2>
+            <div class="cont_3 row">
+                <div class="col-md"></div>
+                <div class="col-md-4">
+                    <div class="card project-card ">
+                        <img src="/portfolio/image/easyscrumlogo.jpg" class="card-img-top" alt="Projeto 1">
                         <div class="card-body">
-                            <h5 class="card-title">Projeto Easy Scrum</h5>
+                            <h5 class="card-title text">Projeto Easy Scrum</h5>
                             <p class="card-text"></p>
-                            <a href="https://equipecho.vercel.app" class="btn btn-dark">Ver projeto</a>
+                            <a href="https://equipecho.vercel.app" class="btn btn-outline-dark">Ver projeto</a>
                         </div>
                     </div>
                 </div>
+                <div class="col-md"></div>
                 </div>
             </div>
         </div>
     </section>
 
     <br><br>
-
-    <section>
-        <div class="container">
-
-        </div>
-    </section>
-    
-    <section id="Contato" class="py-5">
-        <div class="container">
-            <h2 class="text-center mb-5">Contato</h2>
-            <form>
-                <div class="mb-3">
-                    <label for="name" class="form-label">Nome</label>
-                    <input type="text" class="form-control" id="name" placeholder="Seu nome">
-                </div>
-                <div class="mb-3">
-                    <label for="email" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="email" placeholder="Seu email">
-                </div>
-                <div class="mb-3">
-                    <label for="message" class="form-label">Mensagem</label>
-                    <textarea class="form-control" id="message" rows="5" placeholder="Sua mensagem"></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary">Enviar</button>
-            </form>
-        </div>
-    </section>
-
     
     <footer class="text-center">
         <div class="container">

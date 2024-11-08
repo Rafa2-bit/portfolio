@@ -1,7 +1,8 @@
 .hero {
-    background-color: #007bff;
+    background-color: #18202c;
     color: white;
     padding: 50px 0;
+    height: 350px; 
 }
 .hero h1 {
     font-size: 3rem;
@@ -10,16 +11,17 @@
     margin-bottom: 20px;
 }
 footer {
-    background-color: #343a40;
+    background-color: #21262c;
     color: white;
     padding: 20px 0;
 }
-.flex-container {
-     justify-content: space-around;
-}
 .nav_links{
-    background-color: #1152cc;   
+    background-color: #202731;   
 }
-.nav_link{
-    color: white;
+.cont_2{
+    padding: 0 140px;
+}
+.cont_3{
+
+    
 }
