@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio - Rafael</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .hero {
+            background-color: #18202c;
+            color: white;
+            padding: 50px 0;
+            height: 350px; 
+            margin: 0;
+        }
+        .hero h1 {
+            font-size: 3rem;
+        }
+        .project-card {
+            margin-bottom: 20px;
+        }
+        footer {
+            background-color: #21262c;
+            color: white;
+            padding: 20px 0;
+        }
+        body {
+        font-family: Arial, sans-serif;
+        margin: 40px;
+        background: #f5f5f5;
+        color: #333;
+        }
+        h1 {
+        text-align: center;
+        }
+
+        button {
+        background: #1f1f1f;
+        color: rgb(255, 255, 255);
+        border: none;
+        padding: 6px 10px;
+        border-radius: 5px;
+        border-width: 2px;
+        border-style: solid; 
+        border-color: #ffffff;
+        cursor: pointer;
+        }
+
+        button:hover {
+        background: #939393;
+        }
+
+        form {
+        margin-top: 10px;
+        }
+        li{
+        list-style: none;
+        }
+    </style>
+</head>
+<body class="bg-dark container-fluid border-0 m-0 p-0 border-0 text-center">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top nav_links">
+        <div class="container nav_links ">
+          <a class="navbar-brand" href="#hero">Portifolío Rafael Barbosa</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto nav_links">
+              <li class="nav-item">
+                <div class="dropdown">
+                    <a href="#navbarNav" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Tópicos</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#Sobre" class="dropdown-item">Sobre Mim</a></li>
+                        <li><a href="/contato" class="dropdown-item">Currículo</a></li>
+                        <li><a href="#Habilidades" class="dropdown-item">Habilidades</a></li>
+                        <li><a href="#certificados" class="dropdown-item">Certificações</a></li>
+                        <li><a href="#projetos" class="dropdown-item">Projetos</a></li>
+                        <li><a href="#Contato" class="dropdown-item">Contato</a></li>
+                    </ul>
+                </div>
+              </li>
+             
+          </div>
+        </div>
+      </nav>
+      
+      <br><br>
+ 
+    <header class="mt-2">
+    <section class="hero bg-gradient text-center" id="hero" >
+        <div class="container" style="padding: 60px ;">
+            <h1>Olá, eu sou Rafael</h1>
+            <p class="lead">Desenvolvedor Front-end e admirador de tecnologia</p>
+        </div>
+    </section>
+    </header>
+
+    
+    <section id="Sobre" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center" >
+                    <img  style="height: 400px; width: 320px; object-fit: cover;" src="/20241216_124220.jpg" class="img-fluid rounded img_sobre r-circle">
+                </div>
+                <div class="col-md-6 text-light">
+                    <h2>Sobre Mim</h2><br>
+                    <p>Me chamo Rafael Barbosa Candido, tenho 20 anos, nasci e cresci na cidade de São José dos Campos, SP, Brasil. Sou estudante de Análise e Desenvolvimento de Sistemas na Fatec-Jessen Vidal, em SJC.</p>
+                    <p>Sou uma pessoa apaixonada por tecnologia desde criança e sempre me interessei pela área de TI, principalmente na área de programação. O que me despertou esse interesse, foi quando, ainda criança, me fazia a pergunta:"Como essas coisas realmente funcionam?". Desde então eu venho cada vez mais estudando e me atualizando em programação e finalmente desenvolver os meus próprios projetos.</p>
+                    <p>Cada vez mais que me aprofundo na área, mais me interesso e cada vez mais sinto essa fome de participar de novos desafios e projetos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+\
+   <br><br><br>
+
+    <section id="Curriculo">
+        <div class="container-fluid col-lg">
+            <div class="row">
+                <div class="col-md"></div>
+                <div class="text-center col-md-6">
+                <span class="form-control border-dark-subtle bg-dark text-light"><h2 class="mb-4">Currículo</h2>
+                <h6>Sou novo nessa área, mas possuo experiências que possam contribuir para um eventual projeto como, atendimento ao cliente. <br> Veja o Meu Currículo!</h6>
+                <a href="/Currículo_Rafael.docx" class="btn btn-outline-light">Currículo</a></span>
+                </div>
+                <div class="col-md"></div>
+            </div>
+        </div>    
+    </section>
+
+    <br><br>
+
+    <section id="Habilidades" class="py-5">
+        <div class="container-fluid col-lg">
+            <div class="row">
+                <div class="col-md"></div>
+                <div class="text-center col-md-5">
+                <span class="form-control border-dark-subtle bg-dark text-light"><h2 class="mb-4">Habilidades</h2>
+                   <li>HTML E CSS - Básico</li>
+                   <li>Inglês - intermediário</li>
+                   <li>Bootstrap - Básico</li>
+                   <li>Python - Básico</li>
+                   <li>Linux - Básico</li>
+                </span>
+                </div>
+                <div class="col-md"></div>
+            </div>
+        </div>    
+    </section>
+
+    <br><br>
+
+    <section id="formacao" class="py-5">
+        <div class="container-fluid col-lg">
+            <div class="row">
+                <div class="col-md"></div>
+                <div class="text-center col-md-5">
+                <span class="form-control border-dark-subtle bg-dark text-light "><h2 class="mb-4 mt-4">Formação Academica</h2>
+                <div class="text-center py-5">
+                    <span class="form-control bg-dark py-3"><h3 class="text-light py-5 text-center">Fatec - Analise e Desenvolvimento de Sistemas (cursando)</h3><h4 class="text-light mb-3 text-center">Data de Formação: (07/2027)</h4></span>
+                     
+                </div>
+                <% formacoes.forEach((f, i) => { %>
+                <div class="text-center py-5">
+                <span class="form-control bg-dark py-3">
+                    <form action="/delete-formacao" method="post" style="display:inline; margin-left: 490px;">
+                        <input type="hidden" name="index" value="<%= i %>">
+                        <button type="submit"><i class="bi bi-trash"></i></button>
+                    </form>
+                <h3 class="text-light py-5 text-center"><%= f.formacao %></h3><h4 class="text-light mb-3 text-center">Data de Formação: <%= f.data %></h4>
+                <p class="text-light"><%= f.descricao %></p></p>
+                </span>
+                </div> 
+                <% }) %>     
+                </span>
+                </div>
+                <div class="col-md"></div>
+            </div>
+        </div>    
+    </section>
+
+     <!--Formacoes-->
+  <section>
+    <div class="ms-10">
+    <button onclick="toggleForm('formacao')">Adicionar Formação</button>
+    <form id="form-formacao" action="/add-formacao" method="post" style="display:none;">
+      <input name="formacao" placeholder="Nome da formação" required>
+      <input name="data" placeholder="Data de formacao" required>
+      <input name="descricao" placeholder="Descrição da formação" required>
+      <button type="submit" class="text-light">Salvar</button>
+    </form>
+    </div>
+  </section>
+
+    <br><br>
+
+    <section id="certificados" class="mt-5">
+        <div class="container-lg">
+            <div class="row">
+                <h1 class="text-center text-light py-1">Cursos</h1>
+                <div class="col-md-6 text-center py-5">
+                 <span class="form-control bg-dark py-3"><h3 class="text-light py-5 text-center">Sebrae - QAC</h3>
+                 <a href="/Sebrae - QAC.pdf" class="btn btn-outline-light ">Ver certificado</a></span>
+                </div> 
+                <div class="col-md-6 text-center py-5">
+                   <span class="form-control bg-dark py-3"><h3 class="text-light py-5 text-center">Cisco - NDG Linux Unhatched </h3>
+                    <a href="/RafaelCandido-NDG Linux Unhatc-certificate (1).pdf" class="btn btn-outline-light">Ver certificado</a></span>
+                </div>
+
+                <% cursos.forEach((c, i) => { %>
+                <div class="col-md-6 py-4">
+                   <span class="form-control bg-dark py-3 "> 
+                            <form action="/delete-curso" method="post" style="display:inline; margin-left: 550px;" class="text-end" >
+                                <input type="hidden" name="index" value="<%= i %>">
+                                <button type="submit"><i class="bi bi-trash"></i></button>
+                            </form>
+                        <h3 class="text-light py-4 text-center"> <%= c.curso %> </h3>
+                        <p class="text-light text-center mb-5"><%= c.competencias %></p>
+                    <a href="<%= c.arquivo %>" class="btn btn-outline-light">Ver certificado</a>
+                    
+                    </span>
+                </div>
+                <% }) %>
+            </div>
+        </div>
+
+        <section class="ps-3">
+            <button onclick="toggleForm('curso')">Adicionar Curso</button>
+            <form id="form-curso" action="/add-curso" method="post" enctype="multipart/form-data" style="display:none;">
+            <input name="curso" placeholder="Nome do curso" required>
+            <input name="competencias" placeholder="Competencias desenvolvidas" required>
+            <input type="file" name="arquivo"/>
+            <button type="submit" class="btn btn-outline-dark">Salvar</button>
+            </form>
+        </section>
+    </section>
+
+    <br><br>
+    
+    <section id="projetos" class="py-5 bg-dark mt-5">
+        <div class="container">
+            <h2 class="text-center mb-5 text-light">Meus Projetos</h2>
+            <div class="cont_3 row">
+                <div class="col-md"></div>
+                <div class="col-md-4">
+                    <div class="card project-card ">
+                        <img src="/easyscrumlogo.jpg" class="card-img-top" alt="Projeto 1">
+                        <div class="card-body">
+                            <h5 class="card-title text">Projeto Easy Scrum</h5>
+                            <p class="card-text"></p>
+                            <a href="https://equipecho.vercel.app" class="btn btn-outline-dark">Ver projeto</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+
+                    <% projetos.forEach((p, i) => { %>
+
+                    <div class="card project-card ">
+                        <img src="/<%= p.arquivo %>" class="card-img-top" alt="Projeto 1">
+                        <div class="card-body">
+                            <h5 class="card-title text"><%= p.projeto %></h5>
+                            <p class="card-text"><%= p.descricao %></p>
+                            <a href="<%= p.link %>" class="btn btn-outline-dark">Ver projeto</a>
+                        </div>
+                        
+        
+                            
+                            <form action="/delete-projeto" method="post" style="display:inline;" class="text-end me-2 mb-2">
+                                <input type="hidden" name="index" value="<%= i %>">
+                                <button type="submit"><i class="bi bi-trash"></i></button>
+                            </form>
+                          
+                    </div>
+
+                        <% }) %>
+                </div>
+                <div class="col-md"></div>
+                </div>
+            </div>
+        </div>
+
+        <section class="mt-5">
+            <button onclick="toggleForm('projeto')">Adicionar Projeto</button>
+            <form id="form-projeto" action="/add-projeto" enctype="multipart/form-data" method="post" style="display:none;">
+            <input name="projeto" placeholder="Nome do projeto" required>
+            <input name="descricao" placeholder="Descrição do projeto" required>
+            <input name="link" placeholder="Link do projeto" required>
+            <input type="file" name="arquivo"/>
+
+            <button type="submit">Salvar</button>
+            </form>
+        </section>
+        
+    </section>
+
+    <br><br>
+
+    <section id="Contato">
+        <div class="container text-center ">
+            <div class="row py-4">
+                <h1 class="text-light mb-5">Contatos</h1>
+                <div class="py-4"></div>
+                <div class="col-md">
+                <a href="https://github.com/Rafa2-bit"> <i class="bi bi-github fs-1 text-bg-dark"></i></a>
+                </div>
+                <div class="col-md-3">
+                   <a href="https://www.linkedin.com/in/rafael-candido-155705317?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="bi bi-linkedin fs-1 text-bg-dark"></i></a>
+                </div>
+                <div class="col-md-3">
+                    <a href="https://wa.me/5512996418192"><i class="bi bi-whatsapp text-bg-dark fs-1"></i></a>
+                </div>
+                <div class="col-md">
+                    <a href="https://www.instagram.com/faelsbc"><i class="bi bi-instagram text-bg-dark fs-1"></i></a>
+                </div>
+           </div>
+        </div>
+    </section>
+
+    <br><br><br>
+    
+    <footer class="text-center">
+        <div class="container">
+            <p>Site criado por Rafael - Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+     <script>
+    function toggleForm(tipo) {
+      const form = document.getElementById(`form-${tipo}`);
+      form.style.display = form.style.display === "none" ? "block" : "none";
+    }
+  </script>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
