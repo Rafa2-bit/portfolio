@@ -7,19 +7,20 @@ const app = express();
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Configurações
+
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 
-// Define onde os arquivos serão salvos e o nome deles
+
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
-    cb(null, "src/public/"); // pasta onde os arquivos vão ficar
+    cb(null, "src/public/"); 
   },
   filename: (req, file, cb) => {
-    cb(null, Date.now() + "-" + file.originalname); // renomeia para evitar conflitos
+    cb(null, Date.now() + "-" + file.originalname);
   }
 });
 
@@ -27,7 +28,6 @@ const upload = multer({ storage: storage });
 
 
 
-// Dados temporários (memória)
 let projetos = [];
 let cursos = [];
 let formacoes = [];
@@ -72,21 +72,56 @@ app.post("/add-formacao", (req, res) => {
   res.redirect("/");
 });
 
-// Rotas de exclusão
-app.post("/delete-projeto", (req, res) => {
-  projetos.splice(req.body.index, 1);
-  res.redirect("/");
+
+
+app.delete("/deletar-projeto/:index", (req, res) => {
+  const { index } = req.params;
+  projetos.splice(index, 1);
+  res.sendStatus(200);
 });
 
-app.post("/delete-curso", (req, res) => {
+app.delete("/deletar-curso/:index", (req, res) => {
+  const { index } = req.params;
+  cursos.splice(index, 1);
+  res.sendStatus(200);
+});
+
+app.delete("/deletar-formacao/:index", (req, res) => {
+  const { index } = req.params;
+  formacoes.splice(index, 1);
+  res.sendStatus(200);
+});
+
+app.use(express.json());
+app.put("/editar-projeto/:id", (req, res) => {
+  const id = parseInt(req.params.id);
+  projetos[id] = req.body;
+  res.status(200).send("Projeto atualizado");
+});
+
+app.use(express.json());
+app.put("/editar-curso/:id", (req, res) => {
+  const id = parseInt(req.params.id);
+  cursos[id] = req.body;
+  res.status(200).send("Curso atualizado");
+});
+
+app.use(express.json());
+app.put("/editar-formacao/:id", (req, res) => {
+  const id = parseInt(req.params.id);
+  formacoes[id] = req.body;
+  res.status(200).send("Formação atualizada");
+});
+
+/*app.post("/delete-curso", (req, res) => {
   cursos.splice(req.body.index, 1);
   res.redirect("/");
-});
+});*/
 
-app.post("/delete-formacao", (req, res) => {
+/*app.post("/delete-formacao", (req, res) => {
   formacoes.splice(req.body.index, 1);
   res.redirect("/");
-});
+});*/
 
-// Servidor
+
 app.listen(3000, () => console.log("🚀 Servidor rodando em http://localhost:3000"));
