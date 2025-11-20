@@ -2,6 +2,7 @@ import express from "express";
 import path from "path";
 import { fileURLToPath } from "url";
 import multer from "multer";
+import { db } from "./database.js";
 
 const app = express();
 const __filename = fileURLToPath(import.meta.url);
@@ -25,103 +26,106 @@ const storage = multer.diskStorage({
 });
 
 const upload = multer({ storage: storage });
-
-
-
-let projetos = [];
-let cursos = [];
-let formacoes = [];
+ 
 
 // Página inicial
-app.get("/", (req, res) => {
+app.get("/", async (req, res) => {
+  const [projetos] = await db.query("SELECT * FROM projetos");
+  const [cursos]   = await db.query("SELECT * FROM cursos");
+  const [formacoes] = await db.query("SELECT * FROM formacoes");
+
   res.render("index", { projetos, cursos, formacoes });
 });
 
 // Rotas de adição
-app.post("/add-projeto",upload.single("arquivo"), (req, res) => {
-  const novoProjeto = {
-    projeto: req.body.projeto,
-    descricao: req.body.descricao,
-    link: req.body.link,
-    arquivo: req.file ? req.file.filename : null
-  }
+app.post("/add-projeto",upload.single("arquivo"), async (req, res) => {
+  const { projeto, descricao, link } = req.body;
+  const arquivo = req.file ? req.file.filename : null;
 
-  projetos.push(novoProjeto);
+  await db.query(
+    "INSERT INTO projetos (nome, descricao, link, arquivo) VALUES (?, ?, ?, ?)",
+    [projeto, descricao, link, arquivo]
+  );
+
   res.redirect("/");
 });
 
-app.post("/add-curso", upload.single("arquivo"), (req, res) => {
-  const novoCurso = {
-    curso: req.body.curso,
-    competencias: req.body.competencias,
-    arquivo: req.file ? req.file.filename : null
-  };
+app.post("/add-curso", upload.single("arquivo"), async (req, res) => {
+   const { curso, competencias } = req.body;
+  const arquivo = req.file ? req.file.filename : null;
 
-  cursos.push(novoCurso);
+  await db.query(
+    "INSERT INTO cursos (nome, competencias, arquivo) VALUES (?, ?, ?)",
+    [curso, competencias, arquivo]
+  );
+
   res.redirect("/");
 });
 
-app.post("/add-formacao", (req, res) => {
-  const novaFormacao = {
-    formacao: req.body.formacao,
-    data: req.body.data,
-    descricao: req.body.descricao,
-  };
+app.post("/add-formacao", async (req, res) => {
+  const { formacao, data, descricao } = req.body;
 
-  formacoes.push(novaFormacao);
+  await db.query(
+    "INSERT INTO formacoes (nome, data_formacao, descricao) VALUES (?, ?, ?)",
+    [formacao, data, descricao]
+  );
+
   res.redirect("/");
 });
 
 
 
-app.delete("/deletar-projeto/:index", (req, res) => {
-  const { index } = req.params;
-  projetos.splice(index, 1);
+app.delete("/deletar-projeto/:index", async (req, res) => {
+   await db.query("DELETE FROM projetos WHERE id = ?", [req.params.index]);
   res.sendStatus(200);
 });
 
-app.delete("/deletar-curso/:index", (req, res) => {
-  const { index } = req.params;
-  cursos.splice(index, 1);
+app.delete("/deletar-curso/:index", async (req, res) => {
+  await db.query("DELETE FROM cursos WHERE id = ?", [req.params.index]);
   res.sendStatus(200);
 });
 
-app.delete("/deletar-formacao/:index", (req, res) => {
-  const { index } = req.params;
-  formacoes.splice(index, 1);
+app.delete("/deletar-formacao/:index", async (req, res) => {
+  console.log(req.params.index)
+  await db.query("DELETE FROM formacoes WHERE id = ?", [req.params.index]);
   res.sendStatus(200);
 });
 
 app.use(express.json());
-app.put("/editar-projeto/:id", (req, res) => {
-  const id = parseInt(req.params.id);
-  projetos[id] = req.body;
-  res.status(200).send("Projeto atualizado");
+app.put("/editar-projeto/:id", async (req, res) => {
+   const { projeto, descricao, link } = req.body;
+
+  await db.query(
+    "UPDATE projetos SET nome=?, descricao=?, link=? WHERE id=?",
+    [projeto, descricao, link, req.params.id]
+  );
+
+  res.send("Projeto atualizado");
 });
 
 app.use(express.json());
-app.put("/editar-curso/:id", (req, res) => {
-  const id = parseInt(req.params.id);
-  cursos[id] = req.body;
-  res.status(200).send("Curso atualizado");
+app.put("/editar-curso/:id", async (req, res) => {
+  const { curso, competencias } = req.body;
+
+  await db.query(
+    "UPDATE cursos SET nome=?, competencias=? WHERE id=?",
+    [curso, competencias, req.params.id]
+  );
+
+  res.send("Curso atualizado");
 });
 
 app.use(express.json());
-app.put("/editar-formacao/:id", (req, res) => {
-  const id = parseInt(req.params.id);
-  formacoes[id] = req.body;
-  res.status(200).send("Formação atualizada");
+app.put("/editar-formacao/:id", async (req, res) => {
+   const { formacao, data, descricao } = req.body;
+
+  await db.query(
+    "UPDATE formacoes SET nome=?, data_formacao=?, descricao=? WHERE id=?",
+    [formacao, data, descricao, req.params.id]
+  );
+
+  res.send("Formação atualizada");
 });
-
-/*app.post("/delete-curso", (req, res) => {
-  cursos.splice(req.body.index, 1);
-  res.redirect("/");
-});*/
-
-/*app.post("/delete-formacao", (req, res) => {
-  formacoes.splice(req.body.index, 1);
-  res.redirect("/");
-});*/
 
 
 app.listen(3000, () => console.log("🚀 Servidor rodando em http://localhost:3000"));

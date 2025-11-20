@@ -170,17 +170,17 @@
                 <% formacoes.forEach((f, i) => { %>
                 <div class="text-center py-5">
                 <span class="form-control bg-dark py-3">
-                <button onclick="deletarFormacao('<%= i %>')">Excluir</button>
+                <button onclick="deletarFormacao('<%= f.id %>')">Excluir</button>
 
-                <button onclick="toggleFormED('editar-formacao-<%= i %>')">Editar</button>
-                <form id="editar-formacao-<%= i %>" data-tipo="formacao" data-id="<%= i %>" onsubmit="editarItem(event)" style="display:none;">
+                <button onclick="toggleFormED('editar-formacao-<%= f.id %>')">Editar</button>
+                <form id="editar-formacao-<%= f.id %>" data-tipo="formacao" data-id="<%= f.id %>" onsubmit="editarItem(event)" style="display:none;">
                 <input type="text" name="formacao" placeholder="Nova formação" required>
                 <input type="text" name="data" placeholder="Nova data" required>
                 <input type="text" name="descricao" placeholder="Nova descrição" required>
                 <button type="submit">Salvar</button>
                 </form>
 
-                <h3 class="text-light py-5 text-center"><%= f.formacao %></h3><h4 class="text-light mb-3 text-center">Data de Formação: <%= f.data %></h4>
+                <h3 class="text-light py-5 text-center"><%= f.nome %></h3><h4 class="text-light mb-3 text-center">Data de Formação: (<%= f.data_formacao %>)</h4>
                 <p class="text-light"><%= f.descricao %></p></p>
                 </span>
                 </div> 
@@ -224,17 +224,17 @@
                 <% cursos.forEach((c, i) => { %>
                 <div class="col-md-6 py-4">
                    <span class="form-control bg-dark py-3 "> 
-                        <button onclick="deletarCurso('<%= i %>')">Excluir</button>                      
+                        <button onclick="deletarCurso('<%= c.id %>')">Excluir</button>                      
 
-                        <button onclick="toggleFormED('editar-curso-<%= i %>')">Editar</button>
-                        <form id="editar-curso-<%= i %>" data-tipo="curso" data-id="<%= i %>" onsubmit="editarItem(event)" style="display:none;">
+                        <button onclick="toggleFormED('editar-curso-<%= c.id %>')">Editar</button>
+                        <form id="editar-curso-<%= c.id %>" data-tipo="curso" data-id="<%= c.id %>" onsubmit="editarItem(event)" style="display:none;">
                         <input type="text" name="curso" placeholder="Novo nome do curso" required>
                         <input type="text" name="competencias" placeholder="Novas competências" required>
                         <input type="text" name="arquivo" placeholder="Novo link (opcional)">
                         <button type="submit">Salvar</button>
                         </form>
 
-                        <h3 class="text-light py-4 text-center"> <%= c.curso %> </h3>
+                        <h3 class="text-light py-4 text-center"> <%= c.nome %> </h3>
                         <p class="text-light text-center mb-5"><%= c.competencias %></p>
                     <a href="<%= c.arquivo %>" class="btn btn-outline-light">Ver certificado</a>
                     
@@ -281,15 +281,15 @@
                     <div class="card project-card ">
                         <img src="/<%= p.arquivo %>" class="card-img-top" alt="Projeto 1">
                         <div class="card-body">
-                            <h5 class="card-title text"><%= p.projeto %></h5>
+                            <h5 class="card-title text"><%= p.nome %></h5>
                             <p class="card-text"><%= p.descricao %></p>
                             <a href="<%= p.link %>" class="btn btn-outline-dark">Ver projeto</a>
                         </div>
                         
-                            <button onclick="deletarProjeto('<%= i %>')">Excluir</button>
+                            <button onclick="deletarProjeto('<%= p.id %>')">Excluir</button>
 
-                            <button onclick="toggleFormED('editar-projeto-<%= i %>')">Editar</button>
-                            <form id="editar-projeto-<%= i %>" data-tipo="projeto" data-id="<%= i %>" onsubmit="editarItem(event)" style="display:none;">
+                            <button onclick="toggleFormED('editar-projeto-<%= p.id %>')">Editar</button>
+                            <form id="editar-projeto-<%= p.id %>" data-tipo="projeto" data-id="<%= p.id %>" onsubmit="editarItem(event)" style="display:none;">
                             <input type="text" name="projeto" placeholder="Novo nome do projeto" required>
                             <input type="text" name="descricao" placeholder="Nova descrição" required>
                             <input type="text" name="link" placeholder="Novo link do projeto" required>
