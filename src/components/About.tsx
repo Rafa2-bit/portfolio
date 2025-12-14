@@ -83,7 +83,7 @@ export default function About() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
             viewport={{ once: true }}
-            href="/src/assets/Currículo_Rafael.pdf"
+            href="/assets/Currículo_Rafael.pdf"
             className="inline-block mt-10 px-6 py-3 rounded-lg border border-neutral-700 hover:border-blue-500 text-neutral-200 hover:text-blue-400 transition-colors"
           >
            Ver Currículo
@@ -96,13 +96,13 @@ export default function About() {
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.7 }}
           viewport={{ once: true }}
-          className="flex ps-40 justify-center relative z-10"
+          className="flex  justify-center relative z-10"
         >
           <div className="relative group">
           
             <div className="absolute -inset-0.5 bg-linear-to-r from-blue-600 to-purple-600 rounded-xl opacity-20 group-hover:opacity-40 blur transition-all" />
 
-              <img src="/assets/20241216_124225.jpg" alt="" className="relative bg-neutral-900 border border-neutral-800 rounded-xl flex items-center justify-center text-neutral-600"/>
+              <img src="/assets/20241216_124225.jpg" alt="" className="relative w-79 h-105 bg-neutral-900 border border-neutral-800 rounded-xl flex items-center justify-center text-neutral-600"/>
 
           </div>
         </motion.div>

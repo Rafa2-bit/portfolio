@@ -22,7 +22,7 @@ export default function BackgroundAnimado() {
     <div className=" inset-0 -z-40 overflow-hidden">
    
       <motion.div
-        className="absolute inset-0 bg-[linear-gradient(to_right,rgba(0,0,100,0.45)_1px,transparent_1px),linear-gradient(to_bottom,rgba(0,0,100,0.45)_1px,transparent_1px)] bg-size-[100px_100px]"
+        className="absolute inset-0 bg-[linear-gradient(to_right,rgba(0,0,100,0.85)_1px,transparent_1px),linear-gradient(to_bottom,rgba(0,0,100,0.75)_1px,transparent_1px)] bg-size-[100px_100px]"
         animate={{
           backgroundPosition: ["1000px 1000px", "0px 0px"],
         }}
