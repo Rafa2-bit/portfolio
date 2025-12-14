@@ -102,7 +102,7 @@ export default function About() {
           
             <div className="absolute -inset-0.5 bg-linear-to-r from-blue-600 to-purple-600 rounded-xl opacity-20 group-hover:opacity-40 blur transition-all" />
 
-              <img src="/src/assets/20241216_124225.jpg" alt="" className="relative bg-neutral-900 border border-neutral-800 rounded-xl flex items-center justify-center text-neutral-600"/>
+              <img src="/assets/20241216_124225.jpg" alt="" className="relative bg-neutral-900 border border-neutral-800 rounded-xl flex items-center justify-center text-neutral-600"/>
 
           </div>
         </motion.div>
